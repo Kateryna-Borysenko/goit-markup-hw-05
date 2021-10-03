@@ -147,15 +147,15 @@ ul {
 }
 .site-nav .link.current::after {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
 
   content: "";
   display: block;
   height: 4px;
+  border-radius: 2px;
 
   background-color: var(--accent-color);
-  border-radius: 2px;
 }
 .contacts {
   display: flex;
