@@ -13,6 +13,7 @@
   --btn-hover: #188ce8;
 
   --bg-overlay: rgba(33, 150, 243, 0.9);
+  --bg-overlay-1: rgba(47, 48, 58, 0.8);
   --backdrop-color: rgba(0, 0, 0, 0.2);
 
   --card-set-gap: 30px;
@@ -142,6 +143,19 @@ ul {
 
 .site-nav .link.current {
   color: var(--accent-color);
+  position: relative;
+}
+.site-nav .link.current::after {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  content: "";
+  display: block;
+  height: 4px;
+
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 .contacts {
   display: flex;
@@ -273,6 +287,24 @@ ul {
 .what-we-do .box {
   display: flex;
   justify-content: space-between;
+}
+.works .list {
+  position: relative;
+}
+.works .description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  padding: 27px 0;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: var(--bg-overlay-1);
 }
 .team {
   background-color: var(--gray-bg-color);
@@ -543,7 +575,7 @@ ul {
 
   background-color: var(--backdrop-color);
 }
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
@@ -571,6 +603,4 @@ ul {
 
   background-color: var(--white-color);
   font-size: 18px;
-  
-  
 }
