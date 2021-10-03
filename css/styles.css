@@ -26,6 +26,8 @@
   --accent-font-family: "Raleway";
 
   --icon-color: #afb1b8;
+
+  --timing-function: var(--timing-function);
 }
 
 /* - - - - - to hide heading - - - - - */
@@ -118,6 +120,8 @@ ul {
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+
+  transition: color 250ms var(--timing-function);
 }
 .site-nav .list:not(:last-child),
 .contacts .list:not(:last-child) {
@@ -139,6 +143,7 @@ ul {
 .contacts .link:hover .icon,
 .contacts .link:focus .icon {
   fill: var(--accent-color);
+
 }
 
 .site-nav .link.current {
@@ -169,6 +174,8 @@ ul {
 .contacts .icon {
   margin-right: 10px;
   fill: var(--primary-text-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 .contacts .thumb {
   margin-right: 10px;
@@ -260,6 +267,8 @@ ul {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+
+  transition: background-color 250ms var(--timing-function);
 }
 .button.primary:focus,
 .button.primary:hover {
@@ -349,6 +358,9 @@ ul {
   justify-content: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
+
+  transition: background-color 250ms var(--timing-function);
 }
 .socials .item:not(:last-child) {
   margin-right: 10px;
@@ -356,12 +368,14 @@ ul {
 
 .socials .icon {
   fill: var(--icon-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .socials .link:hover,
 .socials .link:focus {
   background-color: var(--accent-color);
-  border-radius: 50%;
+  
 }
 .socials .link:hover .icon,
 .socials .link:focus .icon {
@@ -382,9 +396,13 @@ ul {
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+
+  transition: border-color 250ms var(--timing-function);
 }
 .customers .icon {
   fill: var(--icon-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .customers .link:hover,
@@ -411,6 +429,8 @@ ul {
 .address-info .mail,
 .address-info .phone {
   color: var(--transparent-white-color);
+
+  transition: color 250ms var(--timing-function);
 }
 .page-footer .address-info .address {
   color: var(--white-color);
@@ -456,10 +476,14 @@ ul {
 }
 .page-footer .icon {
   fill: var(--white-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 .page-footer .socials .link {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition: background-color 250ms var(--timing-function);
 }
 .page-footer .socials .link:hover {
   background-color: var(--accent-color);
@@ -487,6 +511,8 @@ ul {
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.03em;
+
+  transition: background-color 700ms var(--timing-function), color 250ms var(--timing-function);
 }
 .filter .current {
   background-color: var(--accent-color);
@@ -510,8 +536,13 @@ ul {
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
 }
-.card-set .card:hover,
-.card-set .card:focus {
+.card-set .link{
+  display: block;
+
+  transition: box-shadow 250ms var(--timing-function);
+}
+.card-set .link:hover,
+.card-set .link:focus {
   box-shadow: var(--box-card-shadow);
 }
 .item .card-content {
@@ -530,6 +561,7 @@ ul {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 }
 .item .card-thumb {
   position: relative;
